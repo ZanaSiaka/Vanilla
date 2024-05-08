@@ -38,7 +38,7 @@ if (age === 18) console.log("Tu viens d'être un adulte")  */
 
 // Coding challenge 3
 
-const noteKoala1 = 97
+/* const noteKoala1 = 97
 const noteKoala2 = 112
 const noteKoala3 = 101
 
@@ -59,4 +59,25 @@ if (moyDauphin > moyKoala && moyDauphin >= 100) {
     console.log("Les deux ont gagné")
 } else {
     console.log("Les deux ont perdu")
-}
+} */
+
+/* const day = 'thursday'
+
+switch (day) {
+    case 'monday':
+        console.log("bonjour, aujourd'hui est lundi")
+        break
+    case 'tuesday' : 
+        console.log("Aujourd'hui est mardi les gars")
+        break
+    default :
+        console.log("Aujourd'hui n'est pas lundi ou mardi")
+} */
+
+// Coding Challenge 4
+
+const bill = 40
+
+const tip = 50<bill<300 ?  0.15 * bill : 0.2 * bill
+
+console.log(`The bill was ${bill}, the tip was ${tip} and the total value is ${bill + tip}`)
