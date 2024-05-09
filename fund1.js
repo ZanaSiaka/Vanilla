@@ -76,8 +76,8 @@ switch (day) {
 
 // Coding Challenge 4
 
-const bill = 40
+/* const bill = 40
 
-const tip = 50<bill<300 ?  0.15 * bill : 0.2 * bill
+const tip = bill <= 300 && bill >= 50 ?  .15 * bill : .2 * bill
 
-console.log(`The bill was ${bill}, the tip was ${tip} and the total value is ${bill + tip}`)
+console.log(`The bill was ${bill}, the tip was ${tip} and the total value is ${bill + tip}`) */
