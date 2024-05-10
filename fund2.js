@@ -50,7 +50,7 @@ const calcAge3 = birthYear => {
 const monAge3 = calcAge3(2020)
 console.log(monAge3)
  */
-
+/* 
 function cutFruit(fruit){
     return fruit * 4
 }
@@ -64,3 +64,46 @@ function fruitProcessor(pommes, oranges) {
 }
 
 console.log(fruitProcessor(2, 4))
+ */
+
+
+// Coding Challenge 1
+
+const calcAverage = (score1, score2, score3) => {
+    return (score1 + score2 + score3) / 3
+}
+
+function checkWinner(koalaAverage, dauphinAverage) {
+    const koalaAverage = calcAverage(65, 54, 49)
+    const dauphinAverage = calcAverage(44, 23, 71)
+    if (koalaAverage > dauphinAverage) {
+        return `Les koalas ont gagné ${koalaAverage} contre ${dauphinAverage}`
+    } else if (koalaAverage === dauphinAverage) {
+        return `La partie se termine sur un match nul 🤝`
+    } else {
+        return `Les dauphins ont gagné ${dauphinAverage} contre ${koalaAverage}`
+    }
+}
+
+console.log(checkWinner())
+
+/* const calcAverage = (score1, score2, score3) => {
+    return (score1 + score2 + score3) / 3; 
+}
+
+function checkWinner(koalaAverage, dauphinAverage) {
+    if (koalaAverage > dauphinAverage) {
+        return `Les koalas ont gagné ${koalaAverage} contre ${dauphinAverage}`;
+    } else if (koalaAverage === dauphinAverage) {
+        return `La partie se termine sur un match nul 🤝`;
+    } else {
+        return `Les dauphins ont gagné ${dauphinAverage} contre ${koalaAverage}`;
+    }
+}
+
+const koalaAverage = calcAverage(44, 23, 71);
+const dauphinAverage = calcAverage(44, 23, 71);
+
+console.log(checkWinner(koalaAverage, dauphinAverage));
+
+ */
