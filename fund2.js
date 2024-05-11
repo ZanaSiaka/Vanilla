@@ -69,6 +69,7 @@ console.log(fruitProcessor(2, 4))
 
 // Coding Challenge 1
 
+/* 
 const calcAverage = (score1, score2, score3) => {
     return (score1 + score2 + score3) / 3
 }
@@ -86,6 +87,7 @@ function checkWinner(koalaAverage, dauphinAverage) {
 }
 
 console.log(checkWinner())
+ */
 
 /* const calcAverage = (score1, score2, score3) => {
     return (score1 + score2 + score3) / 3; 
@@ -107,3 +109,56 @@ const dauphinAverage = calcAverage(44, 23, 71);
 console.log(checkWinner(koalaAverage, dauphinAverage));
 
  */
+
+/* 
+const friend = ['Michael', 'Steven', 'Peter']
+console.log(friend)
+
+const year = new Array (2024, 2025, 2026)
+console.log(year[2])
+console.log(year.length)
+console.log(year[year.length - 3])
+
+year[1] = 2005
+console.log(year) 
+ */
+
+/* 
+const friend = ['Michael', 'Steven', 'Peter']
+
+//Add
+const nombre = friend.push('Jay')
+console.log(friend, nombre)
+
+friend.unshift('John')
+console.log(friend)
+
+//Remove
+friend.pop()
+const supp = friend.pop() // Pour montrer la valeur de l'element supprimé
+console.log(friend)
+
+friend.shift()
+console.log(friend)
+
+console.log(friend.indexOf('Steven'))
+console.log(friend.includes('Bob'))
+ */
+
+//Coding Challenge #2
+
+const calcTip = bill => {
+    if(bill >= 50 && bill <= 300){
+        const tip = bill * .15
+        return tip
+    } else {
+        const tip = bill * .20
+        return tip
+    }
+}
+
+const bills = [125, 555, 44]
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])]
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]]
+
+console.log(tips, bills, total)
