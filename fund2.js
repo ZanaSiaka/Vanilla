@@ -146,7 +146,7 @@ console.log(friend.includes('Bob'))
  */
 
 //Coding Challenge #2
-
+/* 
 const calcTip = bill => {
     if(bill >= 50 && bill <= 300){
         const tip = bill * .15
@@ -162,3 +162,109 @@ const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])]
 const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]]
 
 console.log(tips, bills, total)
+ */
+/* 
+const oim = {
+    firstName : 'Zana',
+    lastName: 'Coulibaly', 
+    age : 2024 - 2005,
+    job : 'Web Developper',
+    friends : ['Siaka', 'CZS', 'Sigata']
+}
+
+oim.location = 'Abidjan'
+oim['twitter'] = '@ZanaSiaka21'
+console.log(oim)
+
+const chose = 'Name'
+
+
+console.log(oim.age)
+console.log(oim['first' + chose])
+
+const Challenge = {
+    name: 'Jonas',
+    friends: 3, // ['Michael', 'Willy', 'Mariam']
+    bestFriend: 'Michael' // fiends[0]
+} 
+
+console.log(`${oim.firstName} has ${oim.friends.length} friends, and his best friend is called ${oim.friends[0]}`)
+ */
+
+/* 
+const zana = () => console.log(this)
+console.log(typeof(zana))
+
+const oim = {
+    firstName : 'Zana',
+    lastName: 'Coulibaly', 
+    birthYear: 2005,
+    job : 'Web Developper',
+    friends : ['Siaka', 'CZS', 'Sigata'],
+    hasDriversLicense: true,
+
+    calcAge: function () {
+        this.age = 2024 - this.birthYear
+        return this.age
+    }, 
+
+    getSummary: function() {
+        return `${this.firstName} is a ${this.calcAge()} year old and he is a ${oim.job}, and he has ${this.hasDriversLicense ? "a driver's license" : "not a driver's license"}`
+    }
+
+}
+
+oim.job = 'Full Stack Developper'
+console.log(oim)
+
+console.log(oim.getSummary())
+ */
+
+
+//Coding challenge #3
+/* 
+const bmi = {
+    fullJohnName: 'John Smith',
+    fullMarkName: 'Mark Miller',
+    markMass: 78,
+    markHeight: 1.69,
+    johnMass: 92, 
+    johnHeight: 1.95,
+
+    calcBMI: function() {
+        this.markBMI = this.markMass / this.markHeight ** 2
+        this.johnBMI = this.johnMass / this.johnHeight ** 2
+
+        return this.markBMI > this.johnBMI ? `Mark's BMI (${this.markBMI}) is heigher than John's BMI (${this.johnBMI})` : `John's BMI (${this.johnBMI}) is heigher than Mark's BMI (${this.markBMI})`
+    }
+}
+
+console.log(bmi.calcBMI())
+ */
+
+const mark =  {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+
+    calcBMI: function() {
+        this.bmi = this.mass / this.height ** 2
+        return this.bmi
+    }
+}
+
+const john =  {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+
+    calcBMI: function() {
+        this.bmi = this.mass / this.height ** 2
+        return this.bmi
+    }
+}
+mark.calcBMI()
+console.log(mark.bmi > john.calcBMI() ? `Mark's BMI (${mark.bmi}) is heigher than John's BMI (${john.bmi})` : `John's BMI (${john.bmi}) is heigher than Mark's BMI (${mark.bmi})`)
+
+console.log(mark)
+
