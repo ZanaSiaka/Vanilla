@@ -241,7 +241,7 @@ const bmi = {
 
 console.log(bmi.calcBMI())
  */
-
+/* 
 const mark =  {
     fullName: 'Mark Miller',
     mass: 78,
@@ -268,3 +268,129 @@ console.log(mark.bmi > john.calcBMI() ? `Mark's BMI (${mark.bmi}) is heigher tha
 
 console.log(mark)
 
+ */
+
+
+/* for (let i = 1; i<=10; i++){
+    console.log(`Lifting weights repitition ${i} 🚶🏽‍♂️`)
+} */
+/* 
+const jonasArray = [
+    'jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+    true
+]
+
+const types = []
+
+for (let i = 0; i<jonasArray.length; i++){
+    types.push (typeof (jonasArray[i] ))
+    console.log(`${jonasArray[i]}, ${types[i]}`)
+}
+
+console.log(types) 
+
+const year = [1991, 2007, 1969, 2020]
+const age = [ ]
+
+for (let j = 0; j < year.length; j++){
+    age.push( 2037 - year[j])
+}
+
+console.log(age)
+
+
+for (let i = 0; i<jonasArray.length; i++){
+    if (typeof jonasArray[i] === 'number') break
+
+
+    console.log(`${jonasArray[i]}, ${types[i]}`)
+}
+ */
+
+/* 
+const jonasArray = [
+    'jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher', 
+    ['Michael', 'Peter', 'Steven'],
+    true
+]
+
+// 4, 3, ..., 0
+for (let i = jonasArray.length - 1; i>= 0; i-- ){
+    console.log(i, jonasArray[i])
+
+}
+
+for( let exercise = 1; exercise <= 3; exercise++){
+    console.log(`---------- Starting exercise ${exercise}`)
+    for(let rep = 1; rep <= 5; rep++){
+        console.log(`Exercise ${exercise}: Lifting weight repetion ${rep}`)
+    }
+}
+ */
+
+/* for(let rep = 1; rep <= 10; rep++){
+    console.log(`Lifting weight repetion ${rep}`)
+} */
+
+/* let rep = 1
+while (rep <= 10) {
+    console.log(`Lifting weight repetion ${rep}`)
+    // console.log(rep <= 10)
+    rep+=1
+}
+ */
+
+/* 
+let dice = Math.trunc(Math.random() * 6) + 1 
+// console.log(dice)
+
+while(dice !== 6){
+    console.log(`You rolled a ${dice}`)
+    dice = Math.trunc(Math.random() * 6) + 1
+    if (dice === 6) console.log(`Loop is about to end...`) 
+}
+ */
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+const tips = []
+const totals = []
+
+const calcTip = bill => {
+    if(bill >= 50 && bill <= 300){
+        const tip = bill * .15
+        return tip
+    } else {
+        const tip = bill * .20
+        return tip
+    }
+}
+
+for (let i = 0; i < bills.length; i++){
+    tips.push(calcTip(bills[i]))
+    totals.push(calcTip(bills[i]) + bills[i])
+}
+
+console.log(tips)
+console.log(totals)
+console.log(bills)
+
+const calcAverage = arr => {
+    let somme = 0
+    let avg = 0
+    for (let i = 0; i< arr.length; i++){  
+        somme += arr[i]
+        avg = somme / arr.length    
+    }
+    // totals.push(calcAverage(bills))
+    return avg
+}
+
+console.log(calcAverage(totals))
+console.log(calcAverage(bills))
