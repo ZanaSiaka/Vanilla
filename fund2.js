@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 /* let hasDrivedLicense = false
 const passTest = true
@@ -9,7 +9,6 @@ if (hasDrivedLicense) console.log("I can drive 🚗")
 // const interface = 'Audio'
 // const private = 543
  */
-
 
 /*
 function fruitProcessor(pommes, oranges) {
@@ -65,7 +64,6 @@ function fruitProcessor(pommes, oranges) {
 
 console.log(fruitProcessor(2, 4))
  */
-
 
 // Coding Challenge 1
 
@@ -220,7 +218,6 @@ console.log(oim)
 console.log(oim.getSummary())
  */
 
-
 //Coding challenge #3
 /* 
 const bmi = {
@@ -269,7 +266,6 @@ console.log(mark.bmi > john.calcBMI() ? `Mark's BMI (${mark.bmi}) is heigher tha
 console.log(mark)
 
  */
-
 
 /* for (let i = 1; i<=10; i++){
     console.log(`Lifting weights repitition ${i} 🚶🏽‍♂️`)
@@ -358,39 +354,41 @@ while(dice !== 6){
 }
  */
 
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
-const tips = []
-const totals = []
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
 
-const calcTip = bill => {
-    if(bill >= 50 && bill <= 300){
-        const tip = bill * .15
-        return tip
-    } else {
-        const tip = bill * .20
-        return tip
-    }
+const calcTip = (bill) => {
+  if (bill >= 50 && bill <= 300) {
+    const tip = bill * 0.15;
+    return tip;
+  } else {
+    const tip = bill * 0.2;
+    return tip;
+  }
+};
+
+for (let i = 0; i < bills.length; i++) {
+  tips.push(calcTip(bills[i]));
+  totals.push(calcTip(bills[i]) + bills[i]);
 }
 
-for (let i = 0; i < bills.length; i++){
-    tips.push(calcTip(bills[i]))
-    totals.push(calcTip(bills[i]) + bills[i])
-}
+console.log(tips);
+console.log(totals);
+console.log(bills);
 
-console.log(tips)
-console.log(totals)
-console.log(bills)
+const calcAverage = (arr) => {
+  let somme = 0;
+  let avg = 0;
+  for (let i = 0; i < arr.length; i++) {
+    somme += arr[i];
+    avg = somme / arr.length;
+  }
+  // totals.push(calcAverage(bills))
+  return avg;
+};
 
-const calcAverage = arr => {
-    let somme = 0
-    let avg = 0
-    for (let i = 0; i< arr.length; i++){  
-        somme += arr[i]
-        avg = somme / arr.length    
-    }
-    // totals.push(calcAverage(bills))
-    return avg
-}
+console.log(calcAverage(totals));
+console.log(calcAverage(bills));
 
-console.log(calcAverage(totals))
-console.log(calcAverage(bills))
+// can your create a counter with react ?
